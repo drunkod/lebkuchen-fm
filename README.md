@@ -307,7 +307,13 @@ Helper script `scripts/docker_db_local.sh` runs MongoDB and binds ports for loca
 To stop container run `scripts/docker_db_local.sh stop`.
 
 #### Docker Compose
-You can also run this app via Docker Compose. It has MongoDB already configured. Just pass other necessary config variables.
+You can also run this app via Docker Compose. It has MongoDB already configured. 
+Just pass other necessary config variables.
+
+```sh
+cp dev.env .env
+```
+
 ```sh
 docker compose up --build
 ```
