@@ -69,6 +69,15 @@ Configure your instance via environment variables.
 - `YOUTUBE_API_KEY` - YouTube Data API token
 
 ##### Discord
+
+Go to:
+https://discord.com/developers/applications
+
+https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links
+
+Example url:
+https://discord.com/channels/DISCORD_GUILD_ID/DISCORD_CHANNEL_ID
+
 - `DISCORD_CHANNEL_ID` - ID of the Discord channel where the bot is allowed to run
 - `DISCORD_CLIENT_ID` - Discord application ID
 - `DISCORD_GUILD_ID` - ID of the Discord guild (server) where the bot will operate
@@ -290,9 +299,9 @@ Helper script `scripts/fm.sh` is available for local development purposes. By de
 
 Example commands:
 ```
-> fm.sh "/fm resume"
-> fm.sh "/fm q dQw4w9WgXcQ"
-> fm.sh "/fm x alert"
+> ./fm.sh "/fm resume"
+> ./fm.sh "/fm q dQw4w9WgXcQ"
+> ./fm.sh "/fm x alert"
 ```
 
 Alternatively you can run it as an yarn command from the root of the project:
