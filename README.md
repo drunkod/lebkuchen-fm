@@ -352,6 +352,7 @@ docker compose up --build
 
 ## Link to rtmp stream from browser
 
+HLS as the streaming protocol
 ffmpeg js https://github.com/davedoesdev/streamana?tab=readme-ov-file
 
 ## License
