@@ -90,10 +90,33 @@ https://discord.com/channels/DISCORD_GUILD_ID/DISCORD_CHANNEL_ID
 
 [how_to_get_refresh_token]: https://www.codemzy.com/blog/dropbox-long-lived-access-refresh-token#how-can-i-get-a-refresh-token-manually
 
+1. https://www.dropbox.com/oauth2/authorize?client_id=a5fz6rjgljra21h&token_access_type=offline&response_type=code
+
+2. https://www.dropbox.com/developers/documentation/http/documentation#oauth2-token
+
+```sh
+ curl https://api.dropbox.com/oauth2/token \
+    -d code=ESk9rwEsCgvvvvvvvvvv3aO-TZM \
+    -d grant_type=authorization_code \
+    -d client_id=a5fzvvvvvva21h \
+    -d client_secret=63y0vvvvvvvva7k
+```
+
 #### Authorization
 LebkuchenFM uses _session cookie_ and/or _basic auth with token_ methods to authorize it's users. Each request to `/api/*` endpoint has to be authorized.
 
 Session cookie is set during successful `POST` request to `/api/auth` endpoint and is generally handled by the web client.
+
+For local dev test:
+
+1. Run client localy.
+```sh
+yarn workspace lebkuchen-fm-client dev
+```
+
+2.First login is always correct and creates that account.
+go to: http://localhost:9090/
+
 
 There is no way to register as a new user. Instead LebkuchenFM functions as an invite only system. \
 When there are no registered users, first login is always correct and creates that account. Every next user has to be created using admin dashboard (`/admin`). That way a new account will be created and user is going be able to set the password when they login for the first time.
@@ -327,6 +350,9 @@ cp dev.env .env
 docker compose up --build
 ```
 
+## Link to rtmp stream from browser
+
+ffmpeg js https://github.com/davedoesdev/streamana?tab=readme-ov-file
 
 ## License
 This project is licensed under the [MIT license](LICENSE).
